@@ -1,6 +1,6 @@
 {
   "name": "@fewu-swg/fewu-renderer-pug",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A pug renderer plugin for Fewu.",
   "license": "GPL-2.0-only",
   "author": "0xarch",
@@ -11,8 +11,8 @@
     "pug": "^3.0.3"
   },
   "devDependencies": {
-    "@fewu-swg/abstract-types": "^1.0.0",
-    "@types/node": "^22.15.17",
+    "@fewu-swg/abstract-types": "^1.2.1",
+    "@types/node": "^24.0.3",
     "@types/pug": "^2.0.10",
     "typescript": "^5.8.3"
   },

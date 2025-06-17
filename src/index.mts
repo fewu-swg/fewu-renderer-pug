@@ -1,6 +1,6 @@
 import { compile, compileFile } from "pug";
 import { dirname } from "path";
-import { AbstractRenderer } from "@fewu-swg/abstract-types";
+import { AbstractRenderer, Plugin, BasicContext } from "@fewu-swg/abstract-types";
 
 class PugRenderer implements AbstractRenderer {
     __fewu__ = 'renderer';
@@ -27,4 +27,19 @@ class PugRenderer implements AbstractRenderer {
     }
 }
 
-export { PugRenderer, PugRenderer as renderer };
+export default class PugRendererPlugin implements Plugin {
+    __fewu_is_plugin = true;
+    __fewu_plugin_name = 'Renderer<Template::Pug>';
+
+    exports = {
+        renderers: [
+            new PugRenderer()
+        ],
+        parsers: []
+    }
+
+    constructor(_ctx: BasicContext) {
+    }
+
+    assigner(_ctx: BasicContext): void {};
+}
