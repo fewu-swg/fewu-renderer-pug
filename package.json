@@ -18,5 +18,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "prepublish": "rm -r dist/; pnpm tsc"
   }
 }
